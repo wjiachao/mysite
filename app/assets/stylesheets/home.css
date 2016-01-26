@@ -1,0 +1,16 @@
+.center
+{
+margin:auto;
+width:10%;
+}
+.post
+{
+  margin:auto;
+  width: 60%;
+}
+
+.nav-tabs.nav-justified > li > a,
+.list-group-item:last-child {
+    text-decoration: none;
+}
+

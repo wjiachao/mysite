@@ -1,0 +1,11 @@
+<%@post.each do |post|%>
+<div class="list-group">
+  <%= link_to(post, { :class=>"list-group-item "} ) do %>
+    <h1 class="list-group-item-heading"><%= post.title%></h1>
+    <p class="list-group-item-text"><%= markdown(post.content[0..50])%>...</p>
+  <%end%>
+</div>
+<%end%>
+  
+
+
