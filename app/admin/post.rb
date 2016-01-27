@@ -1,19 +1,25 @@
 ActiveAdmin.register Post do
-   permit_params :title, :content, :id
+  permit_params :title, :content, :id
+  form do |f|
+    inputs '内容' do
+      input :title
+      input :publish_date, label: "Publish Post At"
+      li "Created at #{f.object.created_at}" unless f.object.new_record?
+      input :content
+    end
+    panel '详情' do
+      "创建博客支持编辑文本器"
+    end
+    actions
+  end
 
 
-  # See permitted parameters documentation:
-  # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #  permitted = [:permitted, :attributes]
-  #  permitted << :other if resource.something?
-  #  permitted
-  # end
+  index do
+    column :title
+    column :content
+    column :publish_date
+    default_actions
+  end
 
 
 end
