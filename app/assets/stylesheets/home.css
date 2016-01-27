@@ -14,3 +14,8 @@ width:10%;
     text-decoration: none;
 }
 
+.nav-tabs.nav-justified > li > .no_line
+{
+  border-bottom: none;
+}
+

@@ -6,21 +6,30 @@
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <script>
+    $(window).load(function(){
+      $("#header").sticky({ topSpacing: 0 });
+    });
+  </script>
 
 </head>
 <body style="background-image: url(http://bylur.img43.wal8.com/img43/429797_20140802082820/142216415823.jpg); ">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  
+<!--   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p> -->
+  <div id="header-sticky-wrapper" class="sticky-wrapper" style="height: 100px;">
+    <div id="header" style="width: 1019px; background-color: rgba(243, 243, 243, 0.39)">
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <!-- <a id="me" href="/daneil">
+          <img class="img-circle" src="https://avatars2.githubusercontent.com/u/5812595?v=1&s=460" alt="home" width="140" height="140">
+        </a> -->
+        <li><a href="/" style="color: #F5F5F3" class="no_line">首页</a></li>
+          <li><a href="/daneil" style="color: #F5F5F3" class="no_line">关于我</a></li>
+        <li><a href="/posts" style="color: #F5F5F3" class="no_line">技术Blog</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="container" >
-  <ul class="nav nav-tabs nav-justified" role="tablist">
-      <a id="me" href="/daneil">
-        <img class="img-circle" src="https://avatars2.githubusercontent.com/u/5812595?v=1&s=460" alt="home" width="140" height="140">
-      </a>
-    <li><a href="/">首页</a></li>
-      <li><a href="/daneil">关于我</a></li>
-    <li><a href="/posts">技术Blog</a></li>
-  </ul>
+  
     <%= yield %>
   </div>
 
