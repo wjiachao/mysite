@@ -1,13 +1,17 @@
-<%@post.each do |post|%>
+<%@posts.each do |post|%>
 <div class="list-group">
   <%= link_to(post, { :class=>"list-group-item "} ) do %>
-    <h1 class="list-group-item-heading"><%= post.title%> <%= post.publish_date.strftime('%Y-%M-%d %H:%M:%S')%></h1>
-    <!-- <p class="list-group-item-text"><%= post.content[0..50]%>...</p> -->
+    <%if post.publish_date.blank?%>
+      <h1 class="list-group-item-heading"><%= post.title%></h1>
+    <%else%>
+      <h1 class="list-group-item-heading"><%= post.title%> <%= post.publish_date.strftime('%Y-%M-%d %H:%M:%S')%></h1>
+    <%end%>
     <div class= "list-group-item-tex">
       <%= markdown(post.content[0..50])%>...
     </div>
   <%end%>
 </div>
+<%= paginate @posts %>
 <%end%>
   
 

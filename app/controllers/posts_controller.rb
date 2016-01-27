@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-    @post = Post.all
+    get_page = params[:page].blank? ? 1 : params[:page]
+    # @post = Post.all
+    @posts = Post.all.page(get_page).per(5)
   end
 
   def show
