@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :title, :content, :id, :style
+  permit_params :title, :content, :id, :style, :publish_date
   form do |f|
     inputs '内容' do
       input :title
