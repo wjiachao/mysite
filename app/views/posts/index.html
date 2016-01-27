@@ -1,8 +1,11 @@
 <%@post.each do |post|%>
 <div class="list-group">
   <%= link_to(post, { :class=>"list-group-item "} ) do %>
-    <h1 class="list-group-item-heading"><%= post.title%></h1>
-    <p class="list-group-item-text"><%= markdown(post.content[0..50])%>...</p>
+    <h1 class="list-group-item-heading"><%= post.title%> <%= post.publish_date%></h1>
+    <!-- <p class="list-group-item-text"><%= post.content[0..50]%>...</p> -->
+    <div class= "list-group-item-tex">
+      <%= markdown(post.content[0..50])%>...
+    </div>
   <%end%>
 </div>
 <%end%>

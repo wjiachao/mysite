@@ -25,6 +25,7 @@ gem 'markdown-rails'
 # gem  'markdown',  '~> 1.2.0'
 #my blog
 gem 'activeadmin', github: 'activeadmin'
+gem 'rails_kindeditor'
 gem "font-awesome-rails"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
