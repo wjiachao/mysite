@@ -20,3 +20,7 @@ public/upload/
 
 .powenv
 .powder
+
+#ignore gemfile.local
+Gemfile.lock
+db/schema.rb
