@@ -5,8 +5,8 @@ source 'https://ruby.taobao.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
-gem 'mysql2'
-# gem 'pg'
+# gem 'mysql2'
+gem 'pg'
 
 gem 'devise'
 
@@ -25,7 +25,7 @@ gem 'markdown-rails'
 # gem  'markdown',  '~> 1.2.0'
 #my blog
 gem 'activeadmin', github: 'activeadmin'
-gem 'rails_kindeditor'
+# gem 'rails_kindeditor'
 gem "font-awesome-rails"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -45,7 +45,7 @@ end
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'puma'
+# gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
