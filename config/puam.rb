@@ -2,7 +2,7 @@
 
 environment ENV['RAILS_ENV'] || 'production'
 
-daemonize true
+daemonize false
 
 pidfile "/home/jiachao/shared/tmp/pids/puma.pid"
 stdout_redirect "/home/jiachao/shared/tmp/log/stdout", "/home/jiachao/shared/tmp/log/stderr"
