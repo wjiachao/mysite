@@ -1,5 +1,5 @@
 #! /bin/sh
-  PUMA_CONFIG_FILE=/home/jiachao/config/puma.rb
+  PUMA_CONFIG_FILE=/home/jiachao/current/config/puma.rb
   PUMA_PID_FILE=/home/jiachao/shared/tmp/pids/puma.pid
   PUMA_SOCKET=/home/jiachao/shared/tmp/sockets/puma.sock
 

@@ -1,12 +1,12 @@
  #!/usr/bin/env puma
 
- environment ENV['RAILS_ENV'] || 'production'
+environment ENV['RAILS_ENV'] || 'production'
 
- daemonize true
+daemonize true
 
- pidfile "//home/jiachao/tmp/pids/puma.pid"
- stdout_redirect "//home/jiachao/log/stdout", "//home/jiachao/log/stderr"
+pidfile "/home/jiachao/shared/tmp/pids/puma.pid"
+stdout_redirect "/home/jiachao/shared/tmp/log/stdout", "/home/jiachao/shared/tmp/log/stderr"
 
- threads 0, 16
+threads 0, 16
 
- bind "unix:///tmp/deploy.sock"
+bind "unix:///home/jiachao/shared/tmp/sockets/puma.sock"
