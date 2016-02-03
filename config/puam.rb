@@ -4,8 +4,8 @@
 
  daemonize true
 
- pidfile "//var/www/myapp/tmp/pids/puma.pid"
- stdout_redirect "//var/www/myapp/log/stdout", "//var/www/myapp/log/stderr"
+ pidfile "//home/jiachao/tmp/pids/puma.pid"
+ stdout_redirect "//home/jiachao/log/stdout", "//home/jiachao/log/stderr"
 
  threads 0, 16
 
